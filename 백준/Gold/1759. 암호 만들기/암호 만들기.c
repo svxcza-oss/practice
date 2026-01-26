@@ -6,12 +6,12 @@ int input_line[26] = {0,};
 char sorted[26];
 int path[26];
 
-int isT(char c){
+int isT(char c){//자음인지 판별하는 함수
     if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')return 1;
     return 0;
 }
 
-void init_line(int m){
+void init_line(int m){//문자 정렬
     int cnt = 0;
     
     for(int i = 0; i<m; i++){
@@ -28,7 +28,7 @@ void init_line(int m){
     }
 }
 
-void dfsA(int depth, int index){
+void dfsA(int depth, int index){//dfs를 이용해 조합 탐색
     if(depth == n){
         int J = 0;
         int M = 0;
@@ -63,3 +63,4 @@ int main(void){
     return 0;
     
 }
+
