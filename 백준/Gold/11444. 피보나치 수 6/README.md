@@ -2,6 +2,9 @@
 
 [문제 링크](https://www.acmicpc.net/problem/11444) 
 
+<img width="1372" height="1242" alt="image" src="https://github.com/user-attachments/assets/d23c5210-5ff6-4b1a-a59d-a75c0d73fb83" />
+
+
 ### 성능 요약
 
 메모리: 1116 KB, 시간: 0 ms
