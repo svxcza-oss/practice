@@ -1,6 +1,7 @@
 # [Silver II] N과 M (12) - 15666 
 
-![Uploading image.png…]()
+![KakaoTalk_Photo_2026-02-23-23-58-03](https://github.com/user-attachments/assets/32b9942d-9f72-4af9-84db-a705c5c6388c)
+
 
 [문제 링크](https://www.acmicpc.net/problem/15666) 
 
