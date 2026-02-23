@@ -1,5 +1,7 @@
 # [Silver II] N과 M (12) - 15666 
 
+![Uploading image.png…]()
+
 [문제 링크](https://www.acmicpc.net/problem/15666) 
 
 ### 성능 요약
