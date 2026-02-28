@@ -1,4 +1,5 @@
 # [Gold IV] LCS - 9251 
+<img width="1351" height="1021" alt="image" src="https://github.com/user-attachments/assets/ef2d83eb-4039-4722-9ef4-6e125ad9e689" />
 
 [문제 링크](https://www.acmicpc.net/problem/9251) 
 
