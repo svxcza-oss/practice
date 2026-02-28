@@ -1,4 +1,5 @@
 # [Silver I] 곱셈 - 1629 
+<img width="1927" height="1167" alt="image" src="https://github.com/user-attachments/assets/adc78aa8-aecc-4b35-9552-d239154e42f0" />
 
 [문제 링크](https://www.acmicpc.net/problem/1629) 
 
