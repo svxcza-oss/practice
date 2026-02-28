@@ -1,4 +1,5 @@
 # [Silver II] 좌표 압축 - 18870 
+<img width="2033" height="1154" alt="image" src="https://github.com/user-attachments/assets/ef905109-0f81-4a03-93ae-c105ac8720bf" />
 
 [문제 링크](https://www.acmicpc.net/problem/18870) 
 
