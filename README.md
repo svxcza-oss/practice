@@ -8,3 +8,7 @@
 - [18870번 좌표압축](https://github.com/svxcza-oss/practice/tree/main/%EB%B0%B1%EC%A4%80/Silver/18870.%E2%80%85%EC%A2%8C%ED%91%9C%E2%80%85%EC%95%95%EC%B6%95)
 - [1629번 곱셈 (분활정복)](https://github.com/svxcza-oss/practice/blob/main/%EB%B0%B1%EC%A4%80/Silver/1629.%E2%80%85%EA%B3%B1%EC%85%88/README.md)
 - [9251번 LCS(증명)](https://github.com/svxcza-oss/practice/blob/main/%EB%B0%B1%EC%A4%80/Gold/9251.%E2%80%85LCS/README.md)
+
+
+## 코드 뜯어보기
+- [11725번 트리의 부모 찾기](https://github.com/svxcza-oss/practice/blob/main/%EB%B0%B1%EC%A4%80/Silver/11725.%E2%80%85%ED%8A%B8%EB%A6%AC%EC%9D%98%E2%80%85%EB%B6%80%EB%AA%A8%E2%80%85%EC%B0%BE%EA%B8%B0/README.md)
