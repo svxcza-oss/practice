@@ -1,4 +1,5 @@
 # [Silver II] 트리의 부모 찾기 - 11725 
+<img width="2150" height="1119" alt="image" src="https://github.com/user-attachments/assets/c95d9cc5-25f3-478f-bfc7-5feb538a43e3" />
 
 [문제 링크](https://www.acmicpc.net/problem/11725) 
 
