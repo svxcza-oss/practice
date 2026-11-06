@@ -1,45 +1,47 @@
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int solution(vector<int> bandage, int health, vector<vector<int>> attacks) {
-    int cur_health = health;
-    int max_health = health;
-    
     int t = bandage[0];
-    int x = bandage[1];
-    int y = bandage[2];
+    int s = bandage[1];
+    int p = bandage[2];
+   
+    int cur_heal = health;
+    int max_time = attacks.back()[0];
+    int conti = 0;
+    int idx =0;
     
-    int attack_idx = 0;//현재 처리할 몬스터 공격 인덱스??
-    int succ = 0; // 연속 성공 시간
-    int last_attack_time = attacks.back()[0]; // 아 이러면 바로 뒤에 접근이 가능하구나..!!!! 
     
-
-    
-    for(int i = 1; i<=last_attack_time; i++){
-        if(attack_idx < attacks.size() && attacks[attack_idx][0] == i ){
-            cur_health -= attacks[attack_idx][1];
-            succ = 0;
-            attack_idx++;
-            
-            if(cur_health <= 0) return -1;
-            
-        } 
-        else {
-            cur_health += x;
-            succ++;
-        
-            if(succ == t) {
-                cur_health += y;
-                succ = 0;
-            }
-            
-            if(cur_health > max_health) cur_health = max_health;
+    for(int i = 1; i<= max_time; i++){
+        if(i == attacks[idx][0]){
+            cur_heal -= attacks[idx][1];
+            conti = 0;
+            idx++;
+            if(cur_heal <= 0) return -1;
         }
-        
-        
+        else{
+            cur_heal += s;
+            conti++;
+            if(conti == t) {
+                cur_heal += p;
+                conti = 0;
+            }
+            if(cur_heal > health) cur_heal = health;
+        }
     }
+    return cur_heal;
     
-    return cur_health;
 }
+
+/*
+
+이번 초에 공격이 있나?
+├─ 있음 → 체력 -= 피해, 연속 = 0, 체력 <= 0이면 -1 반환
+└─ 없음 → 체력 += s, 연속++
+          연속 == t면 체력 += p, 연속 = 0
+          체력을 최대 체력으로 자르기
+          
+          
+이걸 그 공식에 대입을 해보면....일단 구현하라는데로 하면 되고 과거의 기록은 굳이? 그냥 계속 이끌면 되는거니까ㅣ
+*/
