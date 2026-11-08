@@ -3,42 +3,48 @@
 using namespace std;
 
 vector<int> solution(vector<int> fees, vector<string> records) {
-    map<string, int> inTime, total;
+    // 차량번호랑 시간 계산해야하니까 차량 번호를 기억하고 있어야함
+    map<int, int> T, charge;
+    vector<int> res;
     
-    for(int i = 0; i<(int)records.size(); i++){
-        stringstream ss(records[i]);
-        string time, car, state;
-        ss >> time >> car >> state;
+    for(int idx = 0; idx<records.size(); idx++){
+        stringstream ss(records[idx]);
+        int car_num; 
+        string state, time;
+        ss >> time >> car_num >> state;
         
         int t = stoi(time.substr(0,2)) * 60 + stoi(time.substr(3,2));
         
         if(state == "IN"){
-            inTime[car] = t;
-            //들어갈때 차 번호랑 들어간 시간을 넣어야하고
+            T[car_num] = t;
+        }
+        else if(state == "OUT"){
+            charge[car_num] += t - T[car_num] ;
+            T.erase(car_num);
+        }
+        
+    }
+    
+    for(auto& [car, inTime] : T){
+        charge[car] += 1439 - inTime;
+    }
+    
+    for(auto& [car, minutes] : charge){
+        if(minutes > fees[0]){
+            int over = minutes - fees[0];
+            int units = (over + fees[2] -1) / fees[2];
+            int fee = fees[1] + units*fees[3];
+            res.push_back(fee);
         }
         else{
-            total[car] += t - inTime[car];
-            inTime.erase(car);
-            //나오면 해당 차 번호에 나간 시간을 빼고
-        }}
-        
-        for(auto& [car,t] : inTime){
-            //안나간차? 그러면 24:00까지 해줘야지
-            total[car] += 1439 - t;
+            res.push_back(fees[1]);
         }
-        
-        vector<int> answer;
-        for(auto&[car, minutes]: total){
-            int fee = fees[1];
-            if(minutes > fees[0]){
-                int over = minutes - fees[0];
-                fee += (over+fees[2]-1)/fees[2]*fees[3];
-            }
-            answer.push_back(fee);
-        }
-     
+    }
+   
+
     
-    return answer;
+    return res;
+    
 }
 
 /*
